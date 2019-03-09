@@ -24,5 +24,9 @@ public class Die
 	{
 		return "Die: " + this.getLastRoll();
 	}
-
+	
+	protected void setLastRoll(int lastRoll) // setter or mutator method
+	{
+		this.lastRoll = lastRoll;
+	}
 }

@@ -37,7 +37,14 @@ public class Dice
 		this.die1 = die1;
 		this.die2 = die2;
 	}
-
+	
+	public int getDie1LastRoll() {
+		return this.die1.getLastRoll();
+	}
+	
+	public int getDie2LastRoll() {
+		return this.die2.getLastRoll();
+	}
 	// Instance methods can also be declared anywhere
 	// Convention: after constructors
 
@@ -90,4 +97,5 @@ public class Dice
 		StdOut.println("Actual count: " + doubleSkunkCount);
 		StdOut.println("Expected count: " + (NUM_TRIALS / 36.0));
 	}
+	
 }

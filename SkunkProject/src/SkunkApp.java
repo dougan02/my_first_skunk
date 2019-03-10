@@ -14,6 +14,9 @@ public class SkunkApp {
 		testPlayer.takeTurn();
 		StdOut.println("final player score is: " + testPlayer.getPlayerScore());
 		
+		testPlayer.takeTurn();
+		StdOut.println("final player score is: " + testPlayer.getPlayerScore());
+		
 		StdOut.println("Welcome to this really cool app!!!");
 
 	}

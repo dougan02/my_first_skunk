@@ -7,20 +7,25 @@ public class Player {
 	private Dice dice;
 	
 	public Player() {
-		this.playerName="Player";
-		this.playerScore=0;
-		this.dice= new Dice();
+		// Setting a default player name, player score, and dice object for default constructor.
+		this.playerName = "Player";
+		this.playerScore = 0;
+		this.dice = new Dice();
 	}
 	
 	public Player(String name) {
-		this.playerName=name;
-		this.playerScore=0;
-		this.dice= new Dice();
+		// This constructor allows you to pass a player name (otherwise the same).
+		this.playerName = name;
+		this.playerScore = 0;
+		this.dice = new Dice();
 	}
 
 	public void takeTurn() {
-		int turnScore= 0;
+		// turnScore variable represents the temporary score that a player has during his/her turn (that can be lost when rolling a skunk).
+		int turnScore = 0;
+		// choice variable used to capture keyboard input for player choice of play or hold.
 		String choice;
+		// Scanner required to take user input.
 		Scanner sc = new Scanner(System.in);
 		
 		do {

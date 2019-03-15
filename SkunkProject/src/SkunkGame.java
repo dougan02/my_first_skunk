@@ -1,5 +1,8 @@
 import java.util.*;
 
+import edu.princeton.cs.introcs.StdIn;
+import edu.princeton.cs.introcs.StdOut;
+
 import edu.princeton.cs.introcs.StdOut;
 public class SkunkGame {
 	// Array list created to hold player objects.
@@ -25,16 +28,15 @@ public class SkunkGame {
 	
 	public void requestPlayers() {
 		// numberOfPlayers variable used to set total players requested and created.
-		int numberOfPlayers;
-		Scanner sc = new Scanner(System.in);
+		int numberOfPlayers;		
 		
 		StdOut.println("How many players would you like to add to the game?");
-		numberOfPlayers = sc.nextInt();
+		numberOfPlayers = StdIn.readInt();
 		
 		//loop based on number of players that requests a player name and adds that player to the player list array.
 		for (int i = 0; i < numberOfPlayers; i++) {
 			StdOut.println("Please enter the player name.");
-			this.players.add(new Player(sc.next()));
+			this.players.add(new Player( StdIn.readString()  ));;
 			StdOut.println("Player " + this.players.get(i).getPlayerName() + " added.");
 			// Alternative implementation code for previous line: players.get(players.size() - 1).getPlayerName();
 		}

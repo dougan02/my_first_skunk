@@ -36,6 +36,7 @@ public class Dice
 	{
 		this.die1 = die1;
 		this.die2 = die2;
+		this.lastRoll = die1.getLastRoll() + die2.getLastRoll();
 	}
 	
 	public int getDie1LastRoll() {

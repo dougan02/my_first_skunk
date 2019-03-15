@@ -1,10 +1,10 @@
 
 public class LoadedDie1 extends Die{
 	
-	public int getLastRoll() // this OVERRIDES Die's getLastRoll(), replacing
-								// it!
+	public LoadedDie1()
 	{
-		return 3;
+		// super();  // We don't need to call the super constructor.
+		this.setLastRoll(3);
 	}
 
 	public String toString() // this OVERRIDES Die's toString()

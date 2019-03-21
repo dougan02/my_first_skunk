@@ -5,6 +5,8 @@ import edu.princeton.cs.introcs.StdOut;
 
 import edu.princeton.cs.introcs.StdOut;
 public class SkunkGame {
+	
+	private Dice sharedDice = new Dice();
 	// Array list created to hold player objects.
 	private ArrayList<Player> players;
 	// scoreLimit variable sets the score required to end the game.
@@ -55,7 +57,7 @@ public class SkunkGame {
 			// Iterating over each player taking a turn.
 			for (int i = 0; i < this.players.size(); i++) {
 				// takeTurn method is invoked for each player.
-				this.players.get(i).takeTurn();
+				Turn t = new Turn(this.players.get(i), this.sharedDice);
 				// Check if current player is over the scoreLimit.  If yes, then remaining players take turns and loop ends (all players take same number of turns).
 				if (this.players.get(i).getPlayerScore() >= scoreLimit) {
 					isPlayerOverScoreLimit = true;

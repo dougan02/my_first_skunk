@@ -1,3 +1,4 @@
+import edu.princeton.cs.introcs.StdIn;
 import edu.princeton.cs.introcs.StdOut;
 import java.util.Scanner;
 
@@ -25,12 +26,11 @@ public class Player {
 		int turnScore = 0;
 		// choice variable used to capture keyboard input for player choice of play or hold.
 		String choice;
-		// Scanner required to take user input.
-		Scanner sc = new Scanner(System.in);
 		
 		do {
 			StdOut.println(this.getPlayerName() + ", would you like (p)lay or (h)old?");
-			choice = sc.next();
+			// choice = sc.next();
+			choice = StdIn.readString();
 			
 			if (choice.equals("p")) {
 				this.dice.roll();

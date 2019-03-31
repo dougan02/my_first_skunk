@@ -6,6 +6,7 @@ import edu.princeton.cs.introcs.StdOut;
 import edu.princeton.cs.introcs.StdOut;
 public class SkunkGame {
 	
+	public static boolean showOutput;
 	private Dice sharedDice = new Dice();
 	// Array list created to hold player objects.
 	private ArrayList<Player> players;
@@ -86,5 +87,10 @@ public class SkunkGame {
 		for (int i = 0; i < this.players.size(); i++) {
 			StdOut.println(this.players.get(i).getPlayerName() + "'s score is " + this.players.get(i).getPlayerScore());
 		}
+	}
+
+	public boolean playOneGame(int[] winForNumberOfStepsOf, int[] lossSteps) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 }

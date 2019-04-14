@@ -9,10 +9,16 @@ public class PredictableDie  extends Die{
 	{
 	super();	
       this.throwSequence = seq;
+      
 	}
 	public void roll() 
 	{
+		if (nextInSeq == throwSequence.length)
+		{
+			nextInSeq = 0;
+		}
 		lastRoll = throwSequence[nextInSeq];
+		this.nextInSeq++;
 	}
 	
 	

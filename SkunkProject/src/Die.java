@@ -1,4 +1,5 @@
 //update: changed 'private lastroll to protected'
+
 import edu.princeton.cs.introcs.StdOut;
 
 public class Die

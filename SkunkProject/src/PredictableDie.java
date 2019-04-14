@@ -1,4 +1,5 @@
 //updated PredictablDie_SHA-1 
+
 public class PredictableDie  extends Die{
 
 	private int[] throwSequence = {};

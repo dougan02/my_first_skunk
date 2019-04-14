@@ -1,12 +1,14 @@
+//update: changed 'private lastroll to protected'
 import edu.princeton.cs.introcs.StdOut;
 
 public class Die
 {
-	private int lastRoll;
+	protected int lastRoll;
 
 	public Die()
 	{
-		this.roll();
+		//this.roll();
+		lastRoll = (int) (Math.random() * 6 + 1); 
 	}
 
 	public int getLastRoll() // getter or accessor method

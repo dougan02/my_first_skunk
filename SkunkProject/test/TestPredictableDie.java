@@ -10,7 +10,6 @@ public class TestPredictableDie {
 	@Test
 	public void test_predictable_die_one_value() 
 	{
-        int[] initializer = {1};
         PredictableDie pd = new PredictableDie(new int[] {1});
         pd.roll();
         assertEquals(1, pd.getLastRoll());
@@ -19,7 +18,6 @@ public class TestPredictableDie {
 	@Test
 	public void test_predictable_die_two_value() 
 	{
-        int[] initializer = {1,2};
         PredictableDie pd = new PredictableDie(new int[] {1,2});
         pd.roll();
         assertEquals(1, pd.getLastRoll());
@@ -31,8 +29,7 @@ public class TestPredictableDie {
 	@Test
 	public void test_predictable_die_two_value_wraparound() 
 	{
-        int[] initializer = {1,2};
-        PredictableDie pd = new PredictableDie(new int[] {1,2});
+       PredictableDie pd = new PredictableDie(new int[] {1,2});
         pd.roll();
         assertEquals(1, pd.getLastRoll());
         
@@ -41,5 +38,14 @@ public class TestPredictableDie {
         
         pd.roll();
         assertEquals(1, pd.getLastRoll());
+	}
+	
+	@Test (expected= ArrayIndexOutOfBoundsException.class)
+	public void test_predictable_die_empty_initializer() 
+	{
+        PredictableDie pd = new PredictableDie(new int[] {});
+        pd.roll();
+        assertEquals(1, pd.getLastRoll());
+        
 	}
 }

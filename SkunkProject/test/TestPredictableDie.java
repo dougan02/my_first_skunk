@@ -1,9 +1,16 @@
-//creating testpredictabledie class
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
 public class TestPredictableDie {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+	@Test
+	public void test_predictable_die_one_value() 
+	{
+        int[] initializer = {1};
+        PredictableDie pd = new PredictableDie(new int[] {1});
+        pd.roll();
+        assertEquals(1, pd.getLastRoll());
 	}
 
 }

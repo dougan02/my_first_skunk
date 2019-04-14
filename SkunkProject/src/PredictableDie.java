@@ -1,9 +1,16 @@
 //Creating predictabledie class
-public class PredictableDie {
+public class PredictableDie  extends Die{
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+	private int[] throwSequence = {};
+	private int nextInSeq = 0;
+	
+	public PredictableDie(int[] seq)
+	{
+      this.throwSequence = seq;
+	}
+	public static void main(String[]  args)
+	{
+		
 	}
 
 }

@@ -1,4 +1,5 @@
-//SHA-1 
+//SHA-1
+//Updated TestPredictableDie
 import static org.junit.Assert.*;
 
 import org.junit.Test;

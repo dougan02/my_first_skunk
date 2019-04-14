@@ -1,5 +1,4 @@
-//Creating predictabledie class
-///SHA-1 
+//SHA-1 
 public class PredictableDie  extends Die{
 
 	private int[] throwSequence = {};

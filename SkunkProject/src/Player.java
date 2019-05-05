@@ -3,6 +3,7 @@ import edu.princeton.cs.introcs.StdOut;
 import java.util.Scanner;
 
 public class Player {
+	
 	private String playerName;
 	private int playerScore;
 	private Dice dice;
@@ -17,11 +18,10 @@ public class Player {
 		this();
 		this.numberChips = startingChipsPerPlayer;
 	}
+	
 	public Player() {
 		// Setting a default player name, player score, and dice object for default constructor.
-		this.playerName = "Player";
-		this.playerScore = 0;
-		this.dice = new Dice();
+		
 		this.rollScore = 0;
 		this.turnScore = 0;
 		this.roundScore = 0;

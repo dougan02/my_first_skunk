@@ -12,6 +12,18 @@ public class Player {
 	public int roundScore;
 	public int gameScore; // for now, same as roundScore
 	public int numberChips;
+	
+	public Player() {
+		// Setting a default player name, player score, and dice object for default constructor.
+		this.playerName = "Player";
+		this.playerScore = 0;
+		this.dice = new Dice();
+		this.rollScore = 0;
+		this.turnScore = 0;
+		this.roundScore = 0;
+		this.gameScore = 0;
+		this.numberChips = 50; // for now
+	}
 
 	public Player(int startingChipsPerPlayer)
 	{
@@ -19,15 +31,6 @@ public class Player {
 		this.numberChips = startingChipsPerPlayer;
 	}
 	
-	public Player() {
-		// Setting a default player name, player score, and dice object for default constructor.
-		
-		this.rollScore = 0;
-		this.turnScore = 0;
-		this.roundScore = 0;
-		this.gameScore = 0;
-		this.numberChips = 50; // for now
-	}
 	
 	public Player(String name) {
 		// This constructor allows you to pass a player name (otherwise the same).

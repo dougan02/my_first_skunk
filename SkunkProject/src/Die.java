@@ -5,6 +5,9 @@ import edu.princeton.cs.introcs.StdOut;
 public class Die
 {
 	protected int lastRoll;
+	private boolean predictible = false;
+	private int[] rolls;
+	private int index_of_next_roll;
 
 	public Die()
 	{

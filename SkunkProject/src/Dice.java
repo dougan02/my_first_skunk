@@ -9,15 +9,15 @@ import edu.princeton.cs.introcs.StdOut;
  * @author eric
  *
  */
- 
+
 public class Dice
 {
 	// Instance fields (variables) may be declared anywhere in class body
 	// Convention: put at top
 
-	private int lastRoll;
 	private Die die1;
 	private Die die2;
+	private int lastRoll;
 
 	// Constructors (object initializers) also can be declared anywhere
 	// Convention: after instance fields/variables
@@ -36,16 +36,8 @@ public class Dice
 	{
 		this.die1 = die1;
 		this.die2 = die2;
-		this.lastRoll = die1.getLastRoll() + die2.getLastRoll();
 	}
-	
-	public int getDie1LastRoll() {
-		return this.die1.getLastRoll();
-	}
-	
-	public int getDie2LastRoll() {
-		return this.die2.getLastRoll();
-	}
+
 	// Instance methods can also be declared anywhere
 	// Convention: after constructors
 
@@ -61,15 +53,9 @@ public class Dice
 
 		die1.roll();
 		die2.roll();
-		this.lastRoll = die1.getLastRoll() + die2.getLastRoll();
+		lastRoll = die1.getLastRoll() + die2.getLastRoll();
 
 	}
-
-	// the following method converts the internals of
-	// this Dice object, and returns a descriptive String:
-	//
-	// Roll of 7 => 4 + 3
-	//
 
 	public String toString()
 	{
@@ -77,7 +63,26 @@ public class Dice
 
 	}
 
-	// static methods can go anywhere - but at end is standard
+	public Die getDie1()
+	{
+		// TODO Auto-generated method stub
+		return this.die1;
+	}
+
+	public Die getDie2()
+	{
+		return this.die2;
+	}
+
+	public void setDie1(Die d)
+	{
+		this.die1 = d;
+	}
+
+	public void setDie2(Die d)
+	{
+		this.die2 = d;
+	}
 
 	public static final int NUM_TRIALS = 360;
 
@@ -90,7 +95,7 @@ public class Dice
 		{
 			dice1.roll();
 			StdOut.println(dice1);
-			
+
 			if (dice1.getLastRoll() == 2)
 				doubleSkunkCount++;
 		}
@@ -98,5 +103,20 @@ public class Dice
 		StdOut.println("Actual count: " + doubleSkunkCount);
 		StdOut.println("Expected count: " + (NUM_TRIALS / 36.0));
 	}
-	
+
+	public int getDie1LastRoll() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public int getDie2LastRoll() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public boolean isDoubleSkunk() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
 }

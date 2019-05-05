@@ -6,12 +6,27 @@ public class Player {
 	private String playerName;
 	private int playerScore;
 	private Dice dice;
-	
+	public int rollScore;
+	public int turnScore;
+	public int roundScore;
+	public int gameScore; // for now, same as roundScore
+	public int numberChips;
+
+	public Player(int startingChipsPerPlayer)
+	{
+		this();
+		this.numberChips = startingChipsPerPlayer;
+	}
 	public Player() {
 		// Setting a default player name, player score, and dice object for default constructor.
 		this.playerName = "Player";
 		this.playerScore = 0;
 		this.dice = new Dice();
+		this.rollScore = 0;
+		this.turnScore = 0;
+		this.roundScore = 0;
+		this.gameScore = 0;
+		this.numberChips = 50; // for now
 	}
 	
 	public Player(String name) {
@@ -56,7 +71,58 @@ public class Player {
 		
 		StdOut.println(this.getPlayerName() + "'s turn is over!!!");
 	}
-	
+	public void addToRollScore(int lastTotal)
+	{
+		rollScore += lastTotal;
+	}
+
+	public void setRollScore(int newRollScore)
+	{
+		this.rollScore = newRollScore;
+	}
+
+	public int getRollScore()
+	{
+		return this.rollScore;
+	}
+
+	public int getNumberChips()
+	{
+		return this.numberChips;
+	}
+
+	public void setNumberChips(int newChips)
+	{
+		this.numberChips = newChips;
+	}
+
+	public void setTurnScore(int newScore)
+	{
+		this.turnScore = newScore;
+	}
+
+	public int getTurnScore()
+	{
+		return this.turnScore;
+	}
+
+	public String getName()
+	{
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public void setRoundScore(int i)
+	{
+		this.roundScore = i;
+	}
+
+	public int getRoundScore()
+	{
+		return this.roundScore;
+	}
+
+
 	public String getPlayerName() {
 		return this.playerName;
 	}
